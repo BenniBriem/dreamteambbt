@@ -1,0 +1,254 @@
+/* === Briem Imperium: Hero Banner === */
+
+#banner {
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.65)
+    ),
+    url("../../images/cmarble.png");
+    /* DGM_ref-frame.jpg */
+    /* b&w.webp */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+                        /* === Remove Spectral’s built-in banner softening === */
+
+/* Spectral adds a pseudo-element overlay that dulls/sharpens the image */
+#banner:after {
+  opacity: 0 !important;
+}
+
+/* Just in case any filters/transforms are applied */
+#banner,
+#banner:before,
+#banner:after {
+  filter: none !important;
+  transform: none !important;
+}
+
+                        /* === CV button: override Spectral hover overlay (uses :before) === */
+#banner .cv-button {
+  background-color: #b08d57 !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+#banner .cv-button:before {
+  background: #b08d57 !important;
+}
+
+#banner .cv-button:hover,
+#banner .cv-button:focus,
+#banner .cv-button:active {
+  background-color: #9a7744 !important;
+  color: #ffffff !important;
+}
+
+#banner .cv-button:hover:before,
+#banner .cv-button:focus:before,
+#banner .cv-button:active:before {
+  background: #9a7744 !important;
+}
+
+
+
+                                    /* === About Section (Imperium) === */
+#one {
+  background-color: #f6f4f1;
+  color: #1a1a1a;
+}
+
+#one h2,
+#one h3 {
+  color: #1a1a1a;
+}
+
+#one p {
+  color: #333333;
+}
+
+/* === Imperium Icons (Section One) === */
+#one .icon.major {
+  color: #b08d57;          /* Imperium gold */
+  border-color: #b08d57;
+}
+
+.icon.major .fa-user-graduate {
+  transform: rotate(45deg);
+}
+
+/* === Section Two === */
+
+
+#two .spotlight .image img {
+  border: 4px solid #b08d57; /* Imperium gold */
+  border-radius: 4px;
+}
+
+
+/* === CTA: background === */
+#cta {
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.75)
+    ),
+    url("../../images/cmarble.png");
+    /* DGM_ref-frame.jpg */
+    /* b&w.webp */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* === Slide-out menu (right panel) === */
+#menu {
+  background-color: #111416; /* dark blue / charcoal */
+}
+
+#menu ul li a {
+  color: #ffffff;
+}
+
+#menu ul li a:hover {
+  color: #537cc8; /* your gold */
+}
+
+/* === Header recolor === */
+#header {
+  background-color: #111416;
+}
+
+#header ul li a:hover { /* This is the color of the slide out menu */
+  color: #537cc8;
+}
+/* #537cc8 */
+#header h1 a:hover { /* This is the color of the title on the header */
+  color: #537cc8;
+  transition: color 1s ease;
+}
+
+#two h2 a:hover {
+  color: #b08d57;
+}
+#two h2 a {
+  border-bottom: none !important;
+}
+
+/* === Hero icon above title === */
+#banner .hero-icon {
+  display: block;
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 0.75em;
+  opacity: 0.9;
+}
+
+
+
+
+/* ===  === */
+/* === VERKEFNI 1 === */
+/* ===  === */
+
+#main > header {
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.65)),
+    url("../../images/project1.jpg");
+    
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#main >header {
+  border: 4px solid #537cc8; /* Imperium gold */
+  border-radius: 4px;
+}
+
+
+/* ===  === */
+/* === VERKEFNI 2 === */
+/* ===  === */
+
+.final-gallery {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.final-gallery .final-shot {
+  flex: 1;
+  min-width: 300px;
+  max-width: 520px;
+}
+
+.final-gallery .final-shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  display: block;
+}
+
+.image-caption {
+  text-align: center;
+  font-size: 0.9em;
+  opacity: 0.8;
+  margin-top: 6px;
+}
+
+.verkefni2-main > header {
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.65)
+    ),
+    url("/images/warroom.png") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+
+/* ===  === */
+/* === VERKEFNI 3 === */
+/* ===  === */
+
+.verkefni3-main > header {
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.65)
+    ),
+    url("/images/thebackground.png") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* ===  === */
+/* === Lokaverkefni === */
+/* ===  === */
+
+.Lokaverkefni-main > header {
+  background-image:
+    linear-gradient(
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.6)
+    ),
+    url("../../images/thedreamteam2.png") !important;
+  background-size: contain !important;
+  background-position: center top !important;
+  background-repeat: no-repeat !important;
+   min-height: 32em !important;
+}

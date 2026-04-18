@@ -1,0 +1,777 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Briem Imperium - Verkefni 2</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/custom.css" />
+
+    <link rel="icon" type="image/png" href="images/favicon-v3.png" />
+    <link rel="shortcut icon" type="image/png" href="images/favicon-v3.png" />
+
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  </head>
+  <body class="is-preload">
+    <div id="page-wrapper">
+
+      <header id="header">
+        <h1><a href="index.html">The Imperium</a></h1>
+        <nav id="nav">
+          <ul>
+            <li class="special">
+              <a href="#menu" class="menuToggle"><span>Valmynd</span></a>
+              <div id="menu">
+                <ul>
+                  <li><a href="index.html">Heimasíða</a></li>
+                  <li><a href="verkefni1.html">Verkefni 1</a></li>
+                  <li><a href="verkefni2.html">Verkefni 2</a></li>
+                  <li><a href="verkefni3.html">Verkefni 3</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <article id="main" class="verkefni2-main">
+        <header>
+          <h2>Verkefni 2</h2>
+          <p>Press-fit og 2D leysiskurður</p>
+        </header>
+
+        <section class="wrapper style5">
+          <div class="inner">
+
+            <h2>Hluti 1: Vinylskurður og límmiðar</h2>
+            
+            <h4>Hugmyndaval og undirbúningur</h4>
+            <p><span class="image right"><img src="images/supermanlogo.png" alt="Superman-merkið" /></span>
+              Fyrsta hugmyndin var að hanna Batman-silhouette sem límmiða. Eftir að hafa
+              skoðað flóknari silhouette myndir áttaði ég mig á því að of miklar smáatriðalínur
+              gætu orðið erfiðar í Inkscape og við sjálfan vínýlskurðinn. Ég ákvað því að
+              einfalda hugmyndina og byrja á ofurhetjumerki í stað fullrar silhouette-myndar.
+            </p>
+
+            <p>
+              Ég valdi Superman-merkið og fann PNG mynd á netinu sem grunn. Markmiðið
+              var að gera það í einlitum (bláum) vínýl til að fá hreint og skýrt útlit en einnig í litasamræmi við límmiða sem var nú þegar á 
+              tövlunni minni.
+            </p>
+            
+
+            <h4>Vektorisering í Inkscape</h4>
+            <p><span class="image right"><img src="images/supermanerror.png" alt="Supermangalli" /></span>
+              Myndin var opnuð í Inkscape og "Trace Bitmap" notað til að breyta
+              raster-mynd í vektorgrafík. Eftir vektoriseringu kom í ljós að lítið
+              þríhyrningslaga svæði ofan á "S" stafnum var mjög smátt.
+              Ég ákvað að stækka það lítillega með því að færa vektorhnúta (nodes)
+              handvirkt.
+            </p>
+
+            <p>
+              Ástæðan fyrir breytingunni var tvíþætt:
+            </p>
+            <ul>
+              <li>Að tryggja að vínýlskerinn ætti ekki í vandræðum með of smá form.</li>
+              <li>Að auka sjónrænan kontrast milli "S" og rammans.</li>
+            </ul>
+
+            <h4>Vektorisering og undirbúningur (nánar)</h4>
+            <p>
+              Eftir <em>Trace Bitmap</em> þurfti, eins og áður kom fram, að ganga úr skugga um að hönnunin væri raunhæf í skurði.
+              Ég fór yfir vektorinn og einfaldaði smáatriði sem gætu slitnað eða rifnað í weeding-ferlinu.
+            </p>
+
+            <p>Eftirfarandi skref voru framkvæmd:</p>
+            <ul>
+              <li>Óþarfa smáatriði fjarlægð eða einfölduð.</li>
+              <li>Vektorhnútar (nodes) handvirkt færðir til að stækka of smá form og gera þau öruggari í skurði.</li>
+              <li><em>Stroke to Path</em> notað þegar þörf var á til að tryggja að línur yrðu skurðarsvæði.</li>
+              <li>Í <em>Fill and Stroke</em> var stillt á <strong>No paint</strong> fyrir Fill og <strong>Flat colour</strong> fyrir Stroke paint.</li>
+              <li>Í <em>Stroke style</em> var <strong>stroke width</strong> stillt á <strong>0.02 mm</strong> samkvæmt leiðbeiningum.</li>
+            </ul>
+
+            <p>
+              Að lokum var skurðarflöturinn stilltur þannig að canvas-stærðin passaði hönnuninni sem best.
+              Ég notaði <em>Resize page to content</em> til að minnka autt pláss og nýta vínýlið betur.
+              Lokaskrá var vistuð sem <strong>SVG</strong> og flutt á USB-drif til notkunar í vínýlskeranum.
+            </p>
+
+            <h4>Endurskoðun á nýtingu efnis</h4>
+            <p>
+              Þegar ég mætti í VR3 (verkstæðið) og ræddi við leiðbeinanda kom í ljós
+              að ég var aðeins að nýta lítinn hluta af vínýlplötunni og sóa
+              töluverðu opnu svæði. Til að bæta nýtingu ákvað ég að bæta við
+              tveimur nýjum hönnunum:
+            </p>
+            <ul>
+              <li>Batman-logo úr Arkham leikjunum</li>
+              <li>Fullri Batman-silhouette</li>
+            </ul>
+
+            <p>
+              Sama ferli var notað: innflutningur myndar → Trace Bitmap →
+              hreinsun vektorlína → einföldun ef þörf var á.
+            </p>
+
+            <h4>Uppsetning á skurðarflöt</h4>
+            <p>
+              Myndunum var raðað hlið við hlið til að nýta skurðarflötinn
+              sem best. Canvas-stærð í Inkscape var síðan stillt að nákvæmlega
+              utan um hönnunina með því að smella á allar myndirnar og gera command+shift+R (Resize page to content).
+              Þetta tryggði að skurðarflöturinn var eins lítill og mögulegt var, sem hjálpaði til við að spara vínýl og tryggja að skurðurinn væri nákvæmur.
+            </p>
+
+            <span class="image fit"><img src="images/stickertrio.png" alt="Uppsetning á skurðarflöt" /></span>
+
+            <h4>Skurður og framkvæmd</h4>
+            <p><span class="image right"><img src="images/batmanvertical.png" alt="batmandead" style="width: 80%"/></span>
+              Nýja hönnunin var vistuð sem svg og flutt út á USB sem tengdur var við vínýlskerann.
+              Ég valdi blátt vínýl fyrir lokaniðurstöðu.
+            </p>
+
+            <p>
+              Eftir skurð var notaður hnífur til að aðskilja límmiða.
+              Þar lenti ég í smávægilegu mistökum þar sem Batman-silhouette
+              var óvart skorin lóðrétt í tvennt. Þetta auðvitað undirstrikaði
+              mikilvægi nákvæmni við handvinnslu eftir skurð.
+            </p>
+
+            <h4>Weeding og yfirfærsla</h4>
+            <p>
+              Batman-merkið var einfalt í fjarlægingu (weeding) og
+              hægt var að líma það beint á tölvu.
+              Superman-merkið var flóknara vegna innri formhluta og
+              því var notað "transfer tape" til að flytja alla eininguna
+              yfir í einu lagi á fartölvu.
+            </p>
+
+            <h4>Niðurstaða og lærdómur</h4>
+            <ul>
+              <li>Smáatriði þurfa að vera nægilega stór fyrir vínýlskurð.</li>
+              <li>Efnisnýting skiptir máli - betra að fylla plötuna.</li>
+              <li>Transfer tape er nauðsynlegt fyrir flóknari grafík.</li>
+              <li>Handvinnsla eftir skurð krefst nákvæmni.</li>
+            </ul>
+
+            <span class="image fit"><img src="images/vinylfinalp.png" alt="Lokaniðurstaða vinyl" /></span>
+
+            <hr />
+
+
+            
+            <!--- === PART 2 === -->
+
+
+            <h2>Hluti 2: Parametrísk hönnun í Fusion 360</h2>
+
+            <h4>Hugmynd og þarfagreining</h4>
+            <p>
+            Ég byrjaði á að spyrja mig: hvað get ég hannað sem ég myndi raunverulega nota?
+            </p>
+            <p>
+            Þar sem ég á margar derhúfur ákvað ég að hanna derhúfu og heyrnatóla geymi.
+            Markmiðið var að búa til einfalda, fallega og parametríska lausn sem gæti
+            haldið 4-8 húfum, ásamt heyrnatólum.
+            </p>
+
+            <h4>Hönnun 1.0 og 2.0 - Fyrstu tilraunir</h4>
+            <p>
+            Í <strong>fyrstu útgáfu (1.0)</strong> hannaði ég ferhyrnt box, opið að framan, með 
+            innbyggðum krókum fyrir derhúfur og heyrnatól (sjá mynd).<br>
+            Eftir að hafa metið plássnotkun og jafnvægi sá ég að lausnin var of fyrirferðarmikil
+            og þurfti þar með að endurskipuleggja hugmyndina.
+            </p>
+            
+            <span class="image">
+            <img src="images/design_v1.png" alt="Hönnun 1.0" style="width: 50%; display: block; margin: 0 auto;" />
+            </span>
+
+            <p>
+            </p>
+        
+            <p>
+            Í <strong>útgáfu 2.0</strong> færði ég króka fyrir heyrnatól á hliðarplötur boxins til að minnka
+            innra dýpt og bæta plássnýtingu.
+            Þó að lausnin væri betri, var jafnvægi og burðargeta ekki fullnægjandi.
+            </p>
+
+            <span class="image">
+            <img src="images/design_v2.png" alt="Hönnun 2.0" style="width: 50%; display: block; margin: 0 auto;" />
+            </span>
+
+            <br />
+            <hr />
+            <h4><u>Hönnun 3.0 </u></h4>
+
+<!-- Derhúfukrókur -->
+            
+            <h5>1) Derhúfukrókar:</h5>
+
+            <p>
+            Í <strong>útgáfu 3.0</strong> var hönnunin uppfærð og derhúfufestingarnar endurhannaðar frá grunni.
+            Markmiðið var að halda derhúfunni stöðugri, sérstaklega þannig að hún velti ekki fram af króknum. Hér var einnig ákveðið að 
+            fækka fjölda derhúfuhaldara úr sex í fimm, með því að sleppa neðri hægri haldaranum. Hugsunin var að nota það auða svæði fyrir rakspíra og slíkt.
+            </p>
+            <p>
+            Til að ákveða lögun festinganna var ég meðvitað að leita að innblæstri á netinu. Ég skoðaði
+            nokkrar gerðir af derhúfuhengjum og festingum, og hönnunir sem mér leist best á voru meðal annars:
+            </p>
+
+            <ul>
+            <li><a href="https://www.amazon.com.au/Wonderjune-Baseball-Vertical-Organizer-Entryway/dp/B0DHH3KZLW" target="_blank" rel="noopener">Innblástur 1 (Derhúfustandur)</a></li>
+            <li><a href="https://www.amazon.com/Organizer-Adhesive-Hangers-Bedroom-B-Black/dp/B0FFSL1S36/ref=sr_1_22?crid=2MXA3QJ27XABH&dib=eyJ2IjoiMSJ9.zRKzAgs1I1liatvmMJcakWSseYtSwK63Y1souws3g-R5lBTQY3QNP5zzPU8Acmf5RDxceavwlkUrRvJAJCi89cqHzck2EKYagsMYDgO6C4CWAz464USI8Sft3pxKCMW_uz6LFQlgYsXGz9ThyUzoQ1lDMm8a6GzPqJMGyJYaEd_mpN5bj4qZ-JSQcm7xkPndM2NyNOSZPurxnYVZwPa0u_TCdkE48BvrOeYmsaOmkoJVv7ahmp3eOQOkFr_aVTpnEm58eAUVini15jBA_uPE8wmGIUtGTvK3EN1ww63FB5U.oRU1B6yUrpZbTbgELKWl-Jy-KeQtu1G8Llda-dOA3OI&dib_tag=se&keywords=cap%2Bholder&qid=1771081042&sprefix=cap%2Bholder%2Caps%2C239&sr=8-22&th=1" 
+                target="_blank" rel="noopener">Innblástur 2 (Krókafestingar)</a></li>
+            </ul>
+
+            <p>
+            Derhúfukrókurinn var síðan hannaður með tvö lykilatriði:
+            </p>
+
+            <ul>
+            <li><strong>Framstuðning:</strong> Endi króksins styður við krúnu derhúfunnar þannig að hún “sitji” á stuðningsfleti.</li>
+            <li><strong>Aftari stöðugleiki:</strong> Auka krókur aftast kemur í veg fyrir að derhúfan velti fram þegar þyngdin færist fram á barminn.</li>
+            <li><strong>Festing við bakplötu:</strong> Krókurinn er fyrst settur í rauf í bakplötunni. 
+            Að því loknu er litlum læsipinna stungið í gegnum gat í festingunni sem kemur í veg fyrir að krókurinn renni aftur út. 
+            Þessi lausn tryggir að festingin sé bæði stöðug og auðveld í samsetningu.</li>
+            </ul>
+
+            <p>
+            Hér að neðan má sjá þróun hugmyndarinnar frá skissu yfir í Fusion 360.
+            </p>
+
+            <span class="image fit" style="max-width: 900px; margin: 0 auto;">
+            <img src="images/designvssketch.png" alt="Derhúfukrókur: iPad skissa og Fusion 360 skissa hlið við hlið" />
+            </span>
+            <br />
+            <p>
+            Eitt sem kom fljótt í ljós var að láréttur stöðugleiki var takmarkaður þegar aðeins ein plata
+            (3 mm akríl) var notuð í festinguna. Til að bæta styrk og minnka sveigju var ákveðið að
+            stafla <strong>þremur</strong> eins krókum saman fyrir hverja festingu.
+            </p>
+
+            <p>
+            Þar með varð heildarþykkt hverrar derhúfufestingar:
+            <code>3 × 3 mm = 9 mm</code>, sem gerði krókaeininguna stífari og áreiðanlegri í notkun.
+            </p>
+
+
+            <h5>2) Heyrnatólakrókar</h5>
+
+            <p>
+            Eftir að hafa hugsað lengi ákvað ég að spyrja leiðbeinanda hvar ég ætti að leita innblásturs.
+            Gallinn var sá að ég skildi ekki hvernig hanna ætti krókinn þannig að hann gæti haldið á heyrnatólum á öruggan hátt.
+            Leiðbeinandi benti mér á ikea skadis króka (<u><a href="https://www.etsy.com/uk/listing/1682770367/hooks-compatible-with-ikea-skadis" target="_blank" rel="noopener">Linkur</a></u>) 
+            sem eru sérstaklega hannaðir til að halda á heyrnatólum og öðrum hlutum í skápum og verkstæðum.
+            <br />
+            <br />
+            Þeir voru þar með fullkominn innblástur fyrir hönnun heyrnatólakróksins. Hér að neðan má sjá skissu og Fusion 360 útgáfuna hlið við hlið.
+            </p>
+
+            <span class="image fit" style="max-width: 900px; margin: 0 auto;">
+            <img src="images/designvssketch2.png" alt="Heyrnatólakrókur: iPad skissa og Fusion 360 skissa hlið við hlið" />
+            </span>
+
+            <p>
+            </p>
+
+            <h5>3) Parametrísk útfærsla í Fusion</h5>
+
+
+            <p>
+            Eftir að skissur höfðu verið mótaðar var hönnun 3.0 útfærð í Fusion 360 sem
+            parametrískt módel. Hönnunin var gerð fyrir <strong>3 mm akríl</strong> og
+            byggði á því að allar stærðir væru stýrðar með parametrum.
+            </p>
+
+            <p>
+            Markmiðið var að tryggja að hægt væri að breyta hæð, breidd,
+            fjölda festinga og öðrum víddum án þess að þurfa að endurteikna
+            verkefnið frá grunni.
+            </p>
+
+            <p>
+            Við uppsetningu parametríska vinnuferlisins var stuðst við
+            eftirfarandi myndband sem leiðarvísir um vinnuaðferð í Fusion 360:
+            <a href="https://www.youtube.com/watch?v=9U2JPfkQpsE" target="_blank" rel="noopener">
+            Fusion 360 Parametric Design Tutorial
+            </a>.
+            </p>
+
+            <p>
+            Hér má sjá lista yfir alla parametra sem notaðir voru í þessari hönnun:
+            </p>
+
+            
+             <a href="images/param.png" target="_blank" rel="noopener"
+            class="image fit"
+            style="max-width: 900px; margin: 0 auto;">
+            <img src="images/param.png" alt="Fusion 360: Parameter tafla (Hönnun 3.0)" />
+            </a>
+
+            <p style="text-align:center; font-size:0.9em; opacity:0.85; margin-top:0.75em;">
+            Skjáskot af parameter-töflunni í Fusion 360 (smelltu á myndina til að opna í fullri stærð).
+            </p>
+
+            <p>
+            Hér má sjá heildarsamsetningu hönnunar 3.0 í Fusion 360.
+            </p>
+
+        
+
+            <div style="max-width: 1000px; margin: 0 auto;">
+            <iframe
+                src="https://gmail6102573.autodesk360.com/g/shares/SH28cd1QT2badd0ea72b0308080283427a7a"
+                width="100%"
+                height="650"
+                frameborder="0"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen>
+            </iframe>
+            </div>
+
+            <p style="text-align:center; font-size:0.9em; opacity:0.85; margin-top: 0.75em;">
+            Gagnvirk útgáfa af parametrísku módelinu í Fusion 360. Ef glugginn birtist ekki:
+            <a href="https://gmail6102573.autodesk360.com/g/shares/SH28cd1QT2badd0ea72b0308080283427a7a"
+                target="_blank" rel="noopener">opna í nýjum flipa</a>.
+            </p>
+                    
+            <p>
+            Í þessari útgáfu var kerf ekki notað sem virkur parameter í módelinu sjálfu.
+            Kerf var tekið inn síðar í ferlinu þegar raunprófanir á laserskurði voru framkvæmdar.
+            </p>
+
+            <hr />
+
+
+            <h4><u>Hönnun 4.0</u></h4>
+
+            <p>
+            Eftir að <strong>Hönnun 3.0</strong> var fullmótuð kom í ljós að verkefnið var of efnisfrekt miðað við
+            það magn af <strong>3 mm akríl</strong> sem úthlutað var á hvern nemanda. Því var farið í markvissa endurhönnun
+            með það að markmiði að minnka pláss- og efnisnotkun án þess að fórna virkni.
+            </p>
+
+            <h5>1) Breyting á parametrum </h5>
+            <p>
+            Fyrsta breytingin var að minnka hæð boxins úr <code>480 mm</code> í <code>360 mm</code>. Einnig var lengd hliðarplatnanna breytt úr <code>250 mm</code> í 
+            <code>240 mm</code>.
+            Þetta minnkaði bæði flatarmál sem þarf að skera út og heildarstærð verkefnisins, sem gerði það raunhæfara innan efnisramma.
+            </p>
+            <p>
+            Hér má sjá lista yfir nýju parametranna.
+            </p>
+
+            <!-- TODO: Mynd af parameter-breytingu eða heildarmódeli 4.0 (hæð 360 mm) -->
+            <span class="image fit" style="max-width: 700px; margin: 0 auto;">
+            <img src="images/updatedparam.png" alt="Hönnun 4.0: minnkuð hæð (360 mm)" />
+            </span>
+            <br />
+            
+
+
+            <h5>2) Uppfærðir derhúfukrókar</h5>
+            <p>
+            Næst var farið í að endurhanna <strong>derhúfukrókana</strong> til að minnka efnisnotkun. Aftari krókurinn var fjarlægður, 
+            og var hugsunin að nýta þá hugmynd fyrir verkefni 3.
+            </p>
+
+            <!-- TODO: Mynd af nýju derhúfukrókunum í Fusion 4.0 -->
+            <span class="image fit" style="max-width: 700px; margin: 0 auto;">
+            <img src="images/caphookdesign2.png" alt="Hönnun 4.0: uppfærðir derhúfukrókar" />
+            </span> 
+            <br />
+
+
+            <h5>3) Heyrnatólakrókar óbreyttir</h5>
+            <p>
+            Heyrnatólakrókarnir reyndust virka vel í <strong>Hönnun 3.0</strong> og var þeim því haldið óbreytt í <strong>Hönnun 4.0</strong>.
+            </p>
+
+            <p>
+            Hér má sjá heildarsamsetningu hönnunar 4.0 í Fusion 360.
+            </p>
+
+            <div style="max-width: 1000px; margin: 0 auto;">
+            <iframe
+                src="https://gmail6102573.autodesk360.com/g/shares/SH28cd1QT2badd0ea72b6d48052a70c6844b"
+                width="100%"
+                height="650"
+                frameborder="0"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen>
+            </iframe>
+            </div>
+
+            <p style="text-align:center; font-size:0.9em; opacity:0.85; margin-top: 0.75em;">
+            Gagnvirk útgáfa af parametrísku módelinu í Fusion 360. Ef glugginn birtist ekki:
+            <a href="https://gmail6102573.autodesk360.com/g/shares/SH28cd1QT2badd0ea72b6d48052a70c6844b"
+                target="_blank" rel="noopener">opna í nýjum flipa</a>.
+            </p>
+
+
+            <h4> Kerf mælingar</h4>
+
+            <p>
+            Áður en endanlegir hlutar voru skornir út þurfti að ákvarða 
+            <strong>kerf</strong> laserskerans, þ.e. hversu breitt efni geislinn fjarlægir
+            í hverjum skurði. Þetta er sérstaklega mikilvægt í press-fit hönnun
+            þar sem jafnvel lítil frávik geta valdið því að festingar verði
+            annaðhvort of lausar eða of þröngar.
+            </p>
+
+            <p>
+            Til að mæla kerf var notað sérstakt <strong>test-kit</strong> sem samanstóð af
+            ytri ramma og röð af smærri einingum innan í honum. Þegar þessar
+            einingar eru skornar út myndast ákveðinn fjöldi skurðarlína sem hægt
+            er að nota til að reikna meðalbreidd skurðarins.
+            </p>
+
+            <span class="image fit" style="max-width: 700px; margin: 0 auto;">
+            <img src="images/kerfkit.png" alt="Kerf test-kit eftir laserskurð">
+            </span>
+
+            <p style="text-align:center; font-size:0.9em; opacity:0.85;">
+            Test-kit eftir laserskurð þar sem einingarnar eru fjarlægðar og mældar.
+            </p>
+
+            <p>
+            Eftir skurð voru einingarnar teknar úr rammanum og mældar með
+            <strong>skífmáli</strong>. Heildarbreidd eininganna var síðan borin saman
+            við breidd opsins sem eftir stóð í rammanum.
+            </p>
+
+            <span class="image fit" style="max-width: 600px; margin: 0 auto;">
+            <img src="images/kerfmeasure.png" alt="Kerf mæling með skífmáli">
+            </span>
+
+            <p style="text-align:center; font-size:0.9em; opacity:0.85;">
+            Mæling á breidd test-kits eftir laserskurð.
+            </p>
+
+            <p>
+            Í þessari framkvæmd mynduðust samtals <strong>21 skurðarlína</strong>. Kerfið
+            var síðan reiknað með eftirfarandi jöfnu:
+            </p>
+
+            <p style="text-align:center;">
+            <code>kerf = (L - L') / n</code>
+            </p>
+
+            <ul>
+            <li><code>L</code> er breidd opsins sem eftir stendur.</li>
+            <li><code>L'</code> er samanlögð breidd útskornu eininganna.</li>
+            <li><code>n</code> er fjöldi skurðarlína.</li>
+            </ul>
+
+            <p style="text-align:center; font-size:1.1em;">
+            <strong>kerf ≈ 0.18 mm</strong>
+            </p>
+
+            <p>
+            Þetta gildi var síðan notað sem viðmið við hönnun laserskorinna
+            press-fit tenginga í verkefninu til að tryggja að hlutarnir myndu
+            passa saman án þess að valda of mikilli spennu í efninu.
+            </p>
+
+
+
+            <h4> Prototype-skjöl til að prófa press-fit festingar</h4>
+            <p>
+            Áður en endanleg útgáfa var skorin út var búið til sérstakt 
+            <strong>prototype-skjal</strong> til að staðfesta að festingarkerfið
+            virkaði eins og hannað var. Prófunarhlutarnir voru laserskornir í
+            <strong>3 mm akríl</strong> og samsettir <strong>án líms</strong>.
+            </p>
+            <p>
+            Markmiðið með prototype-prófuninni var að:
+            </p>
+            <ul>
+            <li>Staðfesta að raufar og tappar passi saman í 3 mm akríl.</li>
+            <li>Meta hvort læsipinni héldi króknum stöðugum án líms.</li>
+            <li>Athuga hvort of mikil spenna myndaðist í efninu við samsetningu.</li>
+            </ul>
+
+            <h6>Fusion hönnun - tvö sjónarhorn</h6>
+
+            <div class="row">
+            <div class="col-6 col-12-medium">
+                <span class="image fit">
+                <img src="images/protofusionfront.png" alt="Prototype í Fusion 360" />
+                </span>
+                <p style="text-align:center; font-size:0.9em; opacity:0.85; margin-top:0.5em;">
+                Skjáskot af prototype-hönnun í Fusion 360, sýn að framan.
+                </p>
+            </div>
+
+            <div class="col-6 col-12-medium">
+                <span class="image fit">
+                <img src="images/protofusionback.png" alt="Prototype í raunprófun – sjónarhorn 1" />
+                </span>
+                <p style="text-align:center; font-size:0.9em; opacity:0.85; margin-top:0.5em;">
+                Skjáskot af prototype-hönnun í Fusion 360, sýn að aftan. Sést hvernig læsipinni er stunginn í raufina til að festa krókinn.
+                </p>
+            </div>
+            </div>
+
+            <h6>Skurðaruppsetning (flat layout)</h6>
+
+            <span class="image fit" style="max-width: 600px; margin: 0 auto;">
+            <img src="images/protolaydown.png" alt="Prototype flat layout" />
+            </span>
+
+            <p style="text-align:center; font-size:0.9em; opacity:0.85; margin-top:0.5em;">
+              Hér sést flat layout af öllum íhlutunum.
+            </p>
+
+
+            <h6>Samsett útgáfa </h6>
+
+            <span class="image fit" style="max-width: 500px; margin: 0 auto;">
+            <img src="images/irlprotosetup.png" alt="Prototype: flat layout fyrir laserskurð" />
+            </span>
+            <p style="text-align:center; font-size:0.9em; opacity:0.85; margin-top:0.5em;">
+            Prototype samsett. Sést hvernig krókarnir passa í raufina, læsipinni passar og fingrafestingarnar passa.
+            </p>
+
+            <h6>Niðurstaða prófunar</h6>
+            <p>
+            Prototype-prófunin gekk vel. Við laserskurð var miðað við <strong>kerf = 0.18 mm</strong> og
+            fingrafestingarnar pössuðu þannig að samsetningin var <strong>stíf</strong> (ekkert laust) en
+            samt <strong>hægt að taka í sundur</strong> án skemmda, eins og ætlast var til.
+            </p>
+
+            <p>
+            Á krókafestingunum hafði ég einnig þegar skilgreint <strong>auka clearance</strong> ofan á kerf,
+            til að tryggja að festingarnar myndu <strong>passa örugglega</strong> í 3 mm akríl í raunprófun.
+            </p>
+
+        
+            
+
+            <h4> Lokaskurður</h4>
+            <p>
+            Eftir að prototype-prófanir og kerf útreikningar höfðu verið kláraðir var verkefnið tilbúið til endanlegrar framleiðslu.
+            Í þessum hluta er farið yfir undirbúning, laserskurð og samsetningu fullrar útgáfu verkefnisins.
+            </p>
+
+            <h6>= Undirbúningur fyrir laserskurð =</h6>
+
+            <p>
+            Þegar hönnun 4.0 hafði verið fullmótuð í Fusion 360 var næsta skref að
+            undirbúa skrár fyrir laserskurð. Til þess þurfti að umbreyta hönnuninni
+            í <strong>2D skurðarferla</strong> sem laserskerinn gat lesið.
+            </p>
+
+            <p>
+            Í Fusion 360 voru plöturnar og festingarnar því lagðar flatt niður, skipt niður í
+            einingar og síðan fluttar út sem <strong>DXF skrár</strong>.
+            </p>
+
+            <p>
+            Til að framkvæma útflutninginn var fylgt leiðbeiningum úr eftirfarandi
+            kennslumyndbandi sem sýnir hvernig má exporta skissum úr Fusion 360
+            sem DXF skrár:
+            </p>
+
+            <p style="text-align:center;">
+            <a href="https://www.youtube.com/watch?v=Tsp-bDq9ZbE" target="_blank">
+            Fusion 360 – Export Sketch as DXF
+            </a>
+            </p>
+
+            <p>
+            Heildarefni sem hver nemandi hafði til ráðstöfunar var <strong>500 × 500 mm akrílplata</strong>.
+            Því þurfti að raða öllum íhlutum verkefnisins niður á slík svæði áður en farið var í skurð.
+            Þrátt fyrir að hönnunin hefði verið minnkuð reyndist hún enn það efnisfrek að hún tók
+            samtals <strong>þrjár</strong> slíkar plötur.
+            </p>
+
+            <p>
+            Ég gerði því samkomulag við leiðbeinanda um að fá að nota aukalega efni og kaupa síðar
+            <strong>tvær auka plötur</strong> til að bæta það upp. Hér að neðan má sjá hvernig íhlutunum
+            var skipt niður á plöturnar fyrir laserskurð.
+            </p>
+
+            <span class="image fit" style="max-width: 600px; margin: 0 auto;">
+            <img src="images/lasercutready.png" alt="Uppsetning hluta fyrir laserskurð í Fusion 360">
+            </span>
+
+            <p style="text-align:center; font-size:0.9em; opacity:0.85;">
+            Uppsetning íhluta á akrílplötur í Fusion áður en skrár voru fluttar út sem DXF fyrir laserskurð.
+            </p>
+
+            
+            <h6>= Laserskurður =</h6>
+
+            <p>
+            Efnið sem notað var í lokaframleiðsluna var <strong>3 mm svartur akríl</strong>.
+            Þar sem verkefnið var skipt niður á <strong>þrjár plötur</strong> voru einnig útbúnar
+            <strong>þrjár DXF skrár</strong> fyrir skurðinn.
+            </p>
+
+            <p>
+            DXF skrárnar voru opnaðar í <strong>Inkscape</strong> áður en þær voru sendar í laserskerann.
+            Þar voru línurnar sameinaðar með <em>Group</em> aðgerðinni og sömu grunnstillingar notaðar
+            og höfðu áður reynst vel við undirbúning fyrir vínýlskurð.
+            </p>
+
+            <ul>
+              <li>Í <em>Fill and Stroke</em> var stillt á <strong>No paint</strong> fyrir <em>Fill</em> og <strong>Flat colour</strong> fyrir <em>Stroke paint</em>.</li>
+              <li>Í <em>Stroke style</em> var <strong>stroke width</strong> stillt á <strong>0.02 mm</strong>.</li>
+            </ul>
+
+            <p>
+            Eftir þessar breytingar voru skrárnar vistaðar sem <strong>SVG</strong> skrár,
+            settar á USB lykil og fluttar yfir í tölvuna sem stýrði laserskeranum.
+            </p>
+
+            <p>
+            Í stýrikerfi laserskerans voru síðan valdar viðeigandi innbyggðar stillingar fyrir
+            <strong>3 mm akríl</strong>. Þar sem vélin hafði áður valdið vandræðum hjá sumum var þó ákveðið
+            að lækka <strong>hraðann úr 30% niður í 22%</strong> til að tryggja hreinni og öruggari skurð.
+            </p>
+
+            <p>
+            Eftir skurð voru íhlutirnir tilbúnir til samsetningar. Þótt ekki séu til sérstakar myndir
+            af öllum hlutunum beint eftir skurð sýna Fusion myndirnar í köflunum hér að ofan vel
+            hvernig hlutarnir litu út fyrir framleiðslu, og lokamyndir sýna að skurðurinn heppnaðist
+            og hlutarnir pössuðu saman eins og ætlað var.
+            </p>
+
+            <h4>Samsetning og lokaniðurstaða</h4>
+
+            <p>
+            Eftir að íhlutirnir höfðu verið skornir út hófst samsetning verkefnisins.
+            Samsetningin fór fram með <strong>press-fit</strong> tengingum þar sem
+            fingrafestingar plötunnar halda hlutunum saman án þess að þörf sé á lími
+            eða öðrum festingum.
+            </p>
+
+            <p>
+            Samsetningin gekk almennt mjög vel og íhlutirnir pössuðu saman eins og
+            ætlast var til. Prototype-prófanirnar sem framkvæmdar voru fyrr í ferlinu
+            reyndust þar sérstaklega mikilvægar þar sem þær staðfestu að
+            <strong>kerf</strong> og <strong>clearance</strong> gildi væru rétt áður en
+            endanlegur skurður var framkvæmdur.
+            </p>
+
+            <p>
+            Allar festingar og tengingar pössuðu saman við samsetningu. Akríllinn á
+            neðri plötunni reyndist þó vera <em>örlítið lausari</em> en búist var við,
+            en það hafði ekki áhrif á virkni samsetningarinnar og hluturinn
+            hélt samt stöðugleika eins og ætlað var.
+            </p>
+
+            <p>
+            Eftir samsetningu var verkefnið tilbúið til notkunar og hægt að staðfesta
+            að bæði derhúfu- og heyrnatólafestingarnar virkuðu eins og hannað var.
+            </p>
+
+            <div class="final-gallery">
+            <div class="final-shot">
+              <img src="images/honnun4irlleft.png" alt="Loka uppsetning verkefnisins – sjónarhorn 1">
+            </div>
+
+            <div class="final-shot">
+              <img src="images/honnun4irlright.png" alt="Loka uppsetning verkefnisins – sjónarhorn 2">
+              </div>
+            </div>
+
+            <p style="text-align:center; font-size:0.9em; opacity:0.85; margin-top:10px;">
+            Lokasamsett útgáfa verkefnisins. Derhúfufestingarnar halda húfunum stöðugum og
+            press-fit tengingarnar tryggja að samsetningin haldist án líms eða skrúfa.
+            </p>
+
+            <h4> Umræða og lærdómur</h4>
+
+            <p>
+            Í þessu verkefni kom fljótt í ljós hversu mikilvægt er að sameina
+            <strong>hönnun, prófanir og framleiðslu</strong> í einu samfelldu ferli.
+            Þó að hönnun 3.0 hefði virkað vel í CAD umhverfi reyndist hún of
+            efnisfrek þegar raunverulegar takmarkanir verkefnisins voru teknar
+            með í reikninginn. Það leiddi til þróunar á <strong>hönnun 4.0</strong>,
+            þar sem stærðir voru minnkaðar og lausnin aðlöguð að tiltæku efni.
+            </p>
+
+            <p>
+            Kerf mælingar og prototype prófanir reyndust sérstaklega mikilvægar
+            í ferlinu. Með því að mæla kerf laserskerans og prófa press-fit
+            tengingar áður en farið var í endanlegan skurð var hægt að tryggja
+            að hlutarnir pössuðu saman án þess að þurfa að endurtaka framleiðslu.
+            Þessi undirbúningur sparaði bæði efni og tíma þegar lokaframleiðslan
+            var framkvæmd.
+            </p>
+
+            <p>
+            Heildarferlið sýndi einnig hvernig parametrísk hönnun í Fusion 360
+            getur auðveldað breytingar á verkefni þegar nýjar takmarkanir koma
+            í ljós. Með því að skilgreina lykilstærðir sem parametra var hægt
+            að aðlaga hönnunina hratt og þróa nýja útgáfu án þess að þurfa að
+            endurteikna verkefnið frá grunni.
+            </p>
+
+            <p>
+            Í heildina séð var gaman að tengja saman
+            <strong>hugmynd, CAD hönnun, prófanir og framleiðslu</strong>.
+            Ferlið sýndi vel mikilvægi þess að prófa lausnir í smærri skrefum
+            áður en farið er í endanlega framleiðslu.
+            </p>
+
+            <h4>Hönnunarskjöl og hlekkir</h4>
+
+            <p>
+            Að neðan má nálgast öll hönnunarskjöl verkefnissins. Þar er hægt að nálgast módelin, ásamt dxf skjölum fyrir laserskurð á thingyverse.
+            </p>
+
+            <ul>
+              <li>
+                <a href="https://www.thingiverse.com/thing:7310217" target="_blank" rel="noopener">
+                  Thingiverse – niðurhal á hönnunarskjölum
+                </a>
+              </li>
+              <li>
+                <a href="https://gmail6102573.autodesk360.com/g/shares/SH28cd1QT2badd0ea72b0308080283427a7a" target="_blank" rel="noopener">
+                  Fusion 360 – Hönnun 3.0
+                </a>
+              </li>
+              <li>
+                <a href="https://gmail6102573.autodesk360.com/g/shares/SH28cd1QT2badd0ea72b6d48052a70c6844b" target="_blank" rel="noopener">
+                  Fusion 360 – Hönnun 4.0
+                </a>
+              </li>
+            </ul>
+
+
+
+
+
+
+
+          </div>
+        </section>
+      </article>
+
+      <footer id="footer">
+        <ul class="copyright">
+          <li>&copy; Briem Imperium</li>
+          <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+      </footer>
+
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+  </body>
+</html>
